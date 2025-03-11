@@ -8,6 +8,7 @@ ul{
   list-style-type: none;
 }
 li{
+  width: 80%;
   margin: 10px;
   max-width: 100%;
   border: none;
