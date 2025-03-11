@@ -9,6 +9,11 @@ ul{
 }
 li{
   margin: 10px;
+  max-width: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 button{
   margin-left: 10px;
