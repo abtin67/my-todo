@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.6023ec96.css","mappings":"AAAA,KAEE,YAAa,CADb,iBAEF,CACA,GACE,oBACF,CACA,GACE,WACF,CACA,OACE,gBACF","sources":["App.css"],"sourcesContent":[".App {\n  text-align: center;\n  padding: 20px;\n}\nul{\n  list-style-type: none;\n}\nli{\n  margin: 10px;\n}\nbutton{\n  margin-left: 10px;\n}\n"],"names":[],"sourceRoot":""}
