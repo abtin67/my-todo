@@ -10,25 +10,15 @@ body{
 .App {
   text-align: center;
   padding: 20px;
+  margin: 30px;
   max-width: 600px;
   border: 1px solid #ccc;
-}
-ul{
-  list-style-type: none;
-}
-li{
-  width: 80%;
-  margin: 10px;
-  max-width: 100%;
-  border: none;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
-button{
-  margin-left: 10px;
-  color: #fff;
-  background-color: aquamarine;
-  outline: none;
-  border: 1px solid #ccc;
+.App h1{
+  padding: 10px;
 }
+

@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from "react-redux"
-import todoSlice from "../features/todoSlice"
+import todoSlice from "../features/todoSlice";
+import "./TodoList.css"
 
 export function TodoList (){
     const todos = useSelector(state=>state.todos)
     const dispatch = useDispatch();
     const {toggleTodo,deleteTodo}=todoSlice.actions
     return(
-        <ul>
+        <ul >
             {
                 todos.map(todo=>(
                     <li key={todo.id}>

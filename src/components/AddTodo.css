@@ -1,0 +1,41 @@
+.formTodo{
+    width: 50%;
+}
+.formTodo input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #777;
+    outline: none;
+}
+.formTodo input:focus{
+    border: 2px solid #333;
+}
+.formTodo div{
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 10px;
+    margin: 5px 0;
+}
+.addBtn{
+    padding: 5px;
+    width: 40%;
+    background-color: aqua;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.addBtn:hover{
+    background-color: rgb(14, 209, 209);
+}
+.cancelBtn{
+    width: 30%;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #f35252;
+}
+.cancelBtn:hover{
+    background-color: #b60b0b;
+    color: antiquewhite;
+}
