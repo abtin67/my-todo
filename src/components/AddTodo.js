@@ -9,9 +9,11 @@ function AddTodo (){
 
     const [text , setText]=useState('');
     const [isFocus,setIsFocus]=useState(false)
-    const [todos,setTodos]=useState([])
+    const [todos,setTodos]=useState([]);
+    const [editingId,setEditingId]=useState(null);
+    const [editingText,setEditingText]=useState('');
     const dispatch = useDispatch();
-    const {add}=todoSlice.actions;
+    const {add,editTodo}=todoSlice.actions;
     const inputRef = useRef(null)
 
     const handelText=(e)=>{
@@ -37,13 +39,29 @@ function AddTodo (){
         e.preventDefault()
     }
 
+    const handelEdit = (e)=>{
+        e.preventDefault();
+        if(editingText.trim()){
+            dispatch(editTodo({id:editingId,newText:editingText}))
+            setEditingId(null);
+            setEditingText('')
+        }
+    }
+
+    
+
     return(
-        <form className="formTodo" onSubmit={handelText}>
+        <form className="formTodo" onSubmit={editingId===null?handelText:handelEdit}>
             <input
             ref={inputRef}
              type="text"
-             value={text}
-             onChange={(e)=>setText(e.target.value)}
+             value={editingId===null? text : editingText}
+             onChange={(e)=>
+                editingId === null ?
+                setText(e.target.value)
+                : setEditingText(e.target.value)
+            }
+            placeholder={editingId === null ? "یک کار اضافه کن...":"ویرایش"}
              onFocus={()=> setIsFocus(true)}
              onBlur={()=> setIsFocus(false)}
               />
@@ -52,11 +70,11 @@ function AddTodo (){
                 <button 
                 onMouseDown={handelMoseDown}
                 className="addBtn"
-                 type="submit">add todo</button>
+                 type="submit">اضافه کن</button>
                 <button
                  onMouseDown={handelMoseDown}
                  onClick={handelCancel}
-                 className="cancelBtn">cansel</button>
+                 className="cancelBtn">بی خیال</button>
                 </div>)
              }
         </form>
